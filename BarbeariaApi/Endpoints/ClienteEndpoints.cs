@@ -51,5 +51,16 @@ public static class ClienteEndpoints
 
             return Results.Ok(res);
         });
+
+        app.MapDelete("/excluir-cliente/{idCliente}", async (int idCliente, GetConnection connectionGetter) =>
+        {
+            using var conDb = await connectionGetter();
+            var dataClient = conDb.QuerySingleOrDefault<DeletarCliente>("Delete_Cliente", new { IdCliente = idCliente }, commandType: CommandType.StoredProcedure);
+
+            var res = dataClient;
+            return Results.Ok(res);
+        });
     }
+
+
 }
