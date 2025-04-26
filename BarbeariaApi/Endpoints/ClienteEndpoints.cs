@@ -60,6 +60,15 @@ public static class ClienteEndpoints
             var res = dataClient;
             return Results.Ok(res);
         });
+
+        app.MapPost("/atualizar-cliente", async ([FromBody] AtualizarClienteModel cliente, GetConnection connectionGetter) =>
+        {
+            using var conDb = await connectionGetter();
+            var dataClient = conDb.QuerySingleOrDefault<AtualizarCliente>("Atualizar_Cliente", cliente, commandType: CommandType.StoredProcedure);
+
+            var res = dataClient;
+            return Results.Ok(res);
+        });
     }
 
 
