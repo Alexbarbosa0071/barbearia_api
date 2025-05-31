@@ -26,17 +26,12 @@ public static class ClienteEndpoints
             return Results.Ok(res);
         });
 
-        app.MapGet("/criar-cliente", async ([FromBody] ClienteModel cliente, GetConnection connectionGetter) =>
+        app.MapPost("/criar-cliente", async ([FromBody] ClienteModel cliente, GetConnection connectionGetter) =>
         {
             using var conDb = await connectionGetter();
-            var dataClient = conDb.QuerySingleOrDefault<Cliente>("Criar_Cliente", cliente, commandType: CommandType.StoredProcedure);
+            var dataClient = conDb.QuerySingleOrDefault<CriarCliente>("Criar_Cliente", cliente, commandType: CommandType.StoredProcedure);
 
-            var res = new
-            {
-                cliente = dataClient
-            };
-
-            return Results.Ok(res);
+            return Results.Ok(dataClient);
         });
 
         app.MapGet("/buscar-cliente/{Id}", async (string Id, GetConnection connectionGetter) =>

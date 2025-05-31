@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="BarbeariaApi.Extensions.CollectionExtensions">
+    <Position X="3.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Extensions\CollectionExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BarbeariaApi.Endpoints.ClienteEndpoints">
+    <Position X="3.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Endpoints\ClienteEndpoints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BarbeariaApi.Models.AtualizarClienteModel">
+    <Position X="6" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAEAA=</HashCode>
+      <FileName>Models\AtualizarClienteModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BarbeariaApi.Models.ClienteModel">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAEAA=</HashCode>
+      <FileName>Models\ClienteModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BarbeariaApi.Data.BarbeariaContext">
+    <Position X="0.75" Y="2" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="BarbeariaApi.Data.BarbeariaContext.GetConnection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Data\BarbeariaContext.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\BarbeariaContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
